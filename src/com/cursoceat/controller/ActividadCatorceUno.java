@@ -37,8 +37,9 @@ public class ActividadCatorceUno {
 			System.out.println("Código: "+ rt.getInt("cod")+"\t"+"Nombre:    "+ rt.getString("nombre")+"\t"
 			+"Curso: "+	rt.getString("curso") +"\t"+"Media: "+ rt.getFloat("media"));
 			
-			
 			}
+			
+			
 			con.close();
 			
 			

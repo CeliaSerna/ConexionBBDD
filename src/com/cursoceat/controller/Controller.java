@@ -74,6 +74,17 @@ public class Controller {
 				
 				
 				}
+			ResultSet rt2;
+			Statement st2;
+			st2=con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+			rt2= st2.executeQuery(sql);
+			rt2.afterLast();
+			while(rt2.previous()) {
+				System.out.println("Código: "+ rt2.getInt("cod")+"\t"+"Nombre:    "+ rt2.getString("nombre")+"\t"
+				+"Curso: "+	rt2.getString("curso") +"\t"+"Media: "+ rt2.getFloat("media"));
+			
+			}
+			
 			
 			con.close();
 			System.out.println("Datos guardados correctamente");
